@@ -34,18 +34,18 @@ StratApp.controller("StratController", ["$scope", "$http", function($scope, $htt
 	$scope.images[name].src = "assets/img/" + name + ".png";
     });
 
-    $http.get("/data/maps.json").success(function(data, status) {
+    $http.get("data/maps.json").success(function(data, status) {
 	$scope.maps = data;
 	$scope.mapOptions = $scope.maps.map(function(map) {
 	    return map.displayName;
 	});
     }).error(function(data, status) { });
 
-    $http.get("/data/players.json").success(function(data, status) {
+    $http.get("data/players.json").success(function(data, status) {
 	$scope.players = data;
     }).error(function() { });
 
-    $http.get("/data/nades.json").success(function(data, status) {
+    $http.get("data/nades.json").success(function(data, status) {
 	$scope.nades = data;
     });
 
