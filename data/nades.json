@@ -1,0 +1,22 @@
+{
+  "decoy": {
+    "displayName": "Decoy Grenade",
+    "imagePath": "assets/img/decoy.png"
+  },
+  "flash": {
+    "displayName": "Flashbang",
+    "imagePath": "assets/img/flash.png"
+  },
+  "he": {
+    "displayName": "HE-Grenade",
+    "imagePath": "assets/img/he.png"
+  },
+  "smoke": {
+    "displayName": "Smoke Grenade",
+    "imagePath": "assets/img/smoke.png"
+  },
+  "molotov": {   
+    "displayName": "Molotov Cocktail",
+    "imagePath": "assets/img/molotov.png"
+  }
+}

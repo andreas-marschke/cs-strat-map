@@ -1,0 +1,66 @@
+textarea[name="stratDesc"] {
+  width: 100%;
+}
+
+#players li {
+  /* margin-top: 5px; */
+}
+
+#players li i {
+/*  min-width: 20px; */
+}
+
+#players li input {
+/*  padding-left: 10px; */
+/*  min-width: 83%; */
+}
+
+#pencil .panel-body img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+#grenades .grenade-list li {
+  padding-bottom: 5px;
+}
+
+#grenades .grenade-list li:last-child {
+  padding-bottom: 0px;
+}
+
+#grenades .grenade img {
+  max-width: 12px;
+  max-height: 15px;
+}
+
+#canvas {
+  position: relative;
+}
+
+#canvas #map,#overlay {
+  position: absolute; 
+  cursor: none; 
+  border: 1px #ddd solid;
+  border-radius: 1px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+#downloadImage {
+  padding-top: 20px;
+}
+
+.fa {
+  font-size: 16px;
+}
+
+.print {
+  display: none;
+}
+
+.player {
+  padding-bottom: 5px;
+}
+
+.player:last-child {
+  padding-bottom: 0px;
+}

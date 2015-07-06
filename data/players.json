@@ -1,0 +1,22 @@
+{
+  "player1": {
+    "name": "",
+    "color": "#FF4235"
+  },
+  "player2": {
+    "name": "",
+    "color": "#FFE537"
+  },
+  "player3": {
+    "name": "",
+    "color": "#4CFF3C"
+  },
+  "player4": {
+    "name": "",
+    "color": "#3DFFE9"
+  },
+  "player5": {
+    "name": "",
+    "color": "#4D40FF"
+  }
+}

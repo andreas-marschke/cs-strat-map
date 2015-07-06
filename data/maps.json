@@ -1,0 +1,38 @@
+[{
+    "displayName": "Cache",
+    "mapName": "de_cache",
+    "imagePath": "assets/img/de_cache.png"
+  },{
+    "displayName": "Crown",
+    "mapName": "de_crown",
+    "imagePath": "assets/img/de_crown.png"
+  },{
+    "displayName": "Dust 2",
+    "mapName": "de_dust2",
+    "imagePath": "assets/img/de_dust2.png"
+  },{
+    "displayName": "Inferno",
+    "mapName": "de_inferno",
+    "imagePath": "assets/img/de_inferno.png"
+  },{
+    "displayName": "Mirage",
+    "mapName": "de_mirage",
+    "imagePath": "assets/img/de_mirage.png"
+  },{
+    "displayName": "Nuke",
+    "mapName": "de_nuke",
+    "imagePath": "assets/img/de_nuke.png"
+  },{
+    "displayName": "Overpass",
+    "mapName": "de_overpass",
+    "imagePath": "assets/img/de_overpass.png"
+  },{
+    "displayName": "Season",
+    "mapName": "de_season",
+    "imagePath": "assets/img/de_season.png"
+  },{
+    "displayName": "Train",
+    "mapName": "de_train",
+    "imagePath": "assets/img/de_train.png"
+  }
+]

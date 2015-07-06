@@ -1,0 +1,45 @@
+.print {
+  display: block;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+#players span {
+  display: block;  
+}
+
+.panel {
+  page-break-before: avoid;
+}
+.panel-heading {
+  page-break-after: avoid;
+}
+
+#pencil,
+#grenades,
+#overlay,
+#downloadImage,
+#save,
+#header,
+.fa-pencil,
+.form-control,
+.fa-user,
+.btn,
+.info,
+.form-control,
+input,
+textarea,
+select{
+  display: none;
+}
+
+.form-control {
+  opacity: 0;
+  display: none;
+  display: hidden;
+}
+
+
+
+
+

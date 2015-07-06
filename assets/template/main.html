@@ -1,0 +1,99 @@
+<div class="row" id="description">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+	<input type="text" class="form-control" name="stratname" ng-model="strategyTitle" placeholder="Strategy Name" />
+	<span class="print">{{ strategyTitle }}</span>
+      </div>
+      <div class="panel-body">
+	<textarea name="stratDesc" id="stratDesc" rows="5" cols="80" class="form-control" ng-model="strategyDescription"></textarea>
+	<p class="print">
+	  {{ strategyDescription }}
+	</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8" id="canvas">
+    <canvas map map-overlay="currentMap" map-maps="maps" id="map"></canvas>
+    <canvas overlay ng-model="pencil" id="overlay"></canvas>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-default" id="map">
+      <div class="panel-heading">
+	Map
+      </div>
+      <div class="panel-body">
+	<span class="info"> Select a Map:</span> <span class="print">{{ currentMap }}</span>
+	<select ng-model="currentMap" class="form-control">
+	  <option ng-repeat="map in maps">{{ map.displayName }}</option>
+	</select>
+
+      </div>
+    </div>
+    <div class="panel panel-default" id="players">
+      <div class="panel-heading">
+	Players
+      </div>
+      <div class="panel-body">
+	<p class="info"> Click the Player Icon to change the color, click the pencil-icon to draw the path for that player</p>
+
+	<div class="row player" ng-repeat="(player,value) in players">
+	  <div class="col-md-12">
+	    <div class="input-group">
+	      <span class="input-group-btn">
+		<button class="btn btn-default" colorpicker colorpicker-position="bottom" ng-model="players[player].color">
+		  <i class="fa fa-user" ng-style='{ "color": players[player].color }'></i>
+		</button>
+	      </span>
+	      <input type="text" ng-model="players[player].name"  placeholder="Player {{ $index + 1 }}" class="form-control">
+	      <span class="input-group-btn">
+		<button class="btn btn-default" ng-click="setPencil(player)">
+		  <i class="fa fa-pencil"></i>
+		</button>
+	      </span>
+	    </div>
+	    <span class="print" ng-style="{ 'color': players[player].color }">{{ players[player].name }}</span>
+	  </div>
+	</div>
+
+      </div>
+    </div>
+    <div class="panel panel-default" id="grenades">
+      <div class="panel-heading">
+	Grenades
+      </div>
+      <div class="panel-body">
+	<ul class="list-unstyled grenade-list">
+	  <li ng-repeat="(key, value) in nades">
+	    <a class="grenade btn btn-default btn-sm btn-block" ng-click="setPencil(key)"> <img ng-src="assets/img/{{key}}.png"/> {{ value.displayName }} </a>
+	  </li>
+	</ul>
+      </div>
+    </div>
+    <div class="panel panel-default" id="pencil">
+      <div class="panel-heading">
+	Status
+      </div>
+      <div class="panel-body">
+	Current Pencil: <pencil ng-model="pencil">
+      </div>
+    </div>
+    <div class="panel panel-default" id="save">
+      <div class="panel-heading">
+	Save Strategy
+      </div>
+      <div class="panel-body">
+	<button ng-click="download()" class="btn btn-block btn-primary">Generate Download</button>
+
+	<div align="center" id="downloadImage">
+	  <a ng-href="{{ downloadDataUrl }}" ng-show="hasDataUrl" download="Strategy.png">Click For Map Download</a>
+	  <a class="text-danger" ng-show="hasDataUrl" ng-click="removeDataUrl()"> <i class="fa fa-times"></i></a>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div after-render></div>
